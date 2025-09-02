@@ -249,3 +249,61 @@
     .modal-content button:hover {
       opacity: 0.95;
     }
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card .label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.summary-card .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Cores especiais para cada tipo */
+.card-investido .value {
+  color: #3b82f6; /* azul */
+}
+
+.card-atual .value {
+  color: #0ea5e9; /* azul claro */
+}
+
+.card-lucro .value {
+  color: #16a34a; /* verde lucro */
+}
+
+.card-rendimento .value {
+  color: #9333ea; /* roxo rendimento */
+}
+
