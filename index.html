@@ -10,37 +10,45 @@
 <body>
   <!-- SEÇÃO DE INVESTIMENTOS -->
   <section class="intro">
-    <h1>📈 Gerenciador de Investimentos</h1>
-    <p>Gerencie seus investimentos de forma fácil, visual e centralizada.</p>
+  <h1>📊 <strong>Gerenciador de Investimentos</strong></h1>
+  <p>Gerencie seus investimentos com clareza, simplicidade e resultados em tempo real.</p>
 
-    <div class="controls">
-      <input type="text" placeholder="Buscar banco..." />
-      <select>
-        <option>Ordenar: Nome</option>
-        <option>Maior rendimento</option>
-        <option>Menor rendimento</option>
-      </select>
+  <div class="controls">
+    <input type="text" placeholder="🔍 Buscar banco..." />
+    <select>
+      <option>Ordenar: Nome</option>
+      <option>Maior rendimento</option>
+      <option>Menor rendimento</option>
+    </select>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card card-investido">
+      <div class="icon">💰</div>
+      <div class="label">Total Investido</div>
+      <div id="total-aplicado" class="value">R$ 0,00</div>
     </div>
 
-    <div class="summary-grid">
-      <div class="summary-card">
-        <div class="label">Total Investido</div>
-        <div id="total-aplicado" class="value">R$ 0,00</div>
-      </div>
-      <div class="summary-card">
-        <div class="label">Valor Atual</div>
-        <div id="total-atual" class="value">R$ 0,00</div>
-      </div>
-      <div class="summary-card">
-        <div class="label">Lucro / Prejuízo</div>
-        <div id="lucro" class="value">R$ 0,00</div>
-      </div>
-      <div class="summary-card">
-        <div class="label">% Rendimento</div>
-        <div id="rendimento" class="value">0%</div>
-      </div>
+    <div class="summary-card card-atual">
+      <div class="icon">💼</div>
+      <div class="label">Valor Atual</div>
+      <div id="total-atual" class="value">R$ 0,00</div>
     </div>
-  </section>
+
+    <div class="summary-card card-lucro">
+      <div class="icon">📈</div>
+      <div class="label">Lucro / Prejuízo</div>
+      <div id="lucro" class="value">R$ 0,00</div>
+    </div>
+
+    <div class="summary-card card-rendimento">
+      <div class="icon">📊</div>
+      <div class="label">% Rendimento</div>
+      <div id="rendimento" class="value">0%</div>
+    </div>
+  </div>
+</section>
+
 
   <button id="add-button" onclick="abrirModal()">+ Adicionar Banco</button>
   <div id="card-container" class="grid">Carregando...</div>
